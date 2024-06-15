@@ -14,7 +14,7 @@ except ImportError:
 
 class TextAdapter(BaseAdapter):
     def __init__(self, set_content_length=True):
-        super(FileAdapter, self).__init__()
+        super(TextAdapter, self).__init__()
         self._set_content_length = set_content_length
 
     def send(self, request, **kwargs):
