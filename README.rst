@@ -1,8 +1,8 @@
-Requests-File
+Requests-Text
 =============
 
-Requests-File is a transport adapter for use with the `Requests`_ Python
-library to allow local filesystem access via file:\/\/ URLs.
+Requests-Text is a transport adapter for use with the `Requests`_ Python
+library to allow text under text:\/\/ URLs.
 
 To use:
 
@@ -14,27 +14,19 @@ To use:
     s = requests.Session()
     s.mount('file://', FileAdapter())
 
-    resp = s.get('file:///path/to/file')
+    resp = s.get('text://sometext')
 
 Features
 --------
 
-- Will open and read local files
+- Will open and read text
 - Might set a Content-Length header
 - That's about it
 
-No encoding information is set in the response object, so be careful using
-Response.text: the chardet library will be used to convert the file to a
-unicode type and it may not detect what you actually want.
-
-EACCES is converted to a 403 status code, and ENOENT is converted to a
-404. All other IOError types are converted to a 400.
-
-Contributing
 ------------
 
 Contributions welcome! Feel free to open a pull request against
-https://github.com/dashea/requests-file
+https://github.com/huakim/python-requests-text
 
 License
 -------

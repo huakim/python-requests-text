@@ -3,7 +3,7 @@ requires = ["setuptools>=61.2", "setuptools_scm[toml]>=3.4.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "requests-file"
+name = "requests-text"
 authors = [{name = "huakim", email = "fijik19@gmail.com"}]
 license = {text = "Apache 2.0"}
 description = "File transport adapter for Requests"
