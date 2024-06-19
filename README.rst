@@ -9,10 +9,10 @@ To use:
 .. code-block:: python
 
     import requests
-    from requests_file import FileAdapter
+    from requests_text import TextAdapter
 
     s = requests.Session()
-    s.mount('file://', FileAdapter())
+    s.mount('text://', TextAdapter())
 
     resp = s.get('text://sometext')
 
