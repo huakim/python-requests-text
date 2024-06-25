@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=61.2", "setuptools_scm[toml]>=3.4.3"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "requests-text"
@@ -17,7 +17,7 @@ classifiers = [
 ]
 urls = {Homepage = "https://github.com/huakim/python-requests-text"}
 dependencies = ["requests>=1.0.0"]
-dynamic = ["version"]
+version = "1.0.0"
 
 [tool.distutils.bdist_wheel]
 universal = 1
