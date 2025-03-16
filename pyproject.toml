@@ -17,7 +17,7 @@ classifiers = [
 ]
 urls = {Homepage = "https://github.com/huakim/python-requests-text"}
 dependencies = ["requests>=1.0.0"]
-version = "1.0.0"
+version = "1.0.2"
 
 [tool.distutils.bdist_wheel]
 universal = 1

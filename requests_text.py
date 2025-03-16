@@ -1,10 +1,6 @@
 from requests.adapters import BaseAdapter
 from requests import Response, codes
-import errno
-import os
-import stat
 import locale
-import io
 
 try:
     from io import BytesIO
@@ -28,14 +24,14 @@ class TextAdapter(BaseAdapter):
         if request.method not in ("GET", "HEAD"):
             raise ValueError("Invalid request method %s" % request.method)
         url = request.url
-        e = url[(url.find('://') + 3):]
+        e = url[(url.find("://") + 3) :]
         resp = Response()
         resp.request = request
         resp_str = str(e).encode(locale.getpreferredencoding(False))
         raw = BytesIO(resp_str)
         resp.raw = raw
         if self._set_content_length:
-                resp.headers["Content-Length"] = len(resp_str)
+            resp.headers["Content-Length"] = len(resp_str)
 
         # Add release_conn to the BytesIO object
         raw.release_conn = raw.close
