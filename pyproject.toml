@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "requests-text"
 authors = [{name = "huakim", email = "fijik19@gmail.com"}]
 license = {text = "Apache 2.0"}
-description = "File transport adapter for Requests"
+description = "Text transport adapter for Requests"
 readme = "README.rst"
 classifiers = [
     "Development Status :: 3 - Alpha",
